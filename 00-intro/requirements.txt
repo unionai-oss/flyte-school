@@ -1,0 +1,11 @@
+dataclasses_json
+flytekitplugins-deck-standard
+flytekit==1.8.1
+ipykernel
+ipython
+joblib
+palmerpenguins
+pandas
+scikit-learn
+typing_extensions
+wheel
