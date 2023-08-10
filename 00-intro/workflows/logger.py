@@ -1,8 +1,9 @@
 import logging
+# Importing Regex for pattern matching
 import re
 
 
-# silence FlyteRemote beta warning since unionml won't expose it to end users.
+# Silence FlyteRemote beta warning since unionml won't expose it to end users.
 class FlyteRemoteFilter(logging.Filter):
     def filter(self, record):
         return not re.match(
@@ -10,7 +11,7 @@ class FlyteRemoteFilter(logging.Filter):
         )
 
 
-# silence logger warnings having to do with PickleFile, since unionml allows this
+# Silence logger warnings having to do with PickleFile, since unionml allows this
 # by default.
 class PickleFilter(logging.Filter):
     def filter(self, record):
