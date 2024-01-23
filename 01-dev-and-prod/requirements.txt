@@ -1,0 +1,4 @@
+flytekit
+flytekitplugins-envd
+flytekitplugins-deck-standard
+plotly
