@@ -33,6 +33,7 @@ FEATURES = [
     "body_mass_g",
 ]
 
+
 @dataclass_json
 @dataclass
 class Hyperparameters:
@@ -92,19 +93,6 @@ def training_workflow(
 
     # return model with results
     return model, train_acc, test_acc
-
-
-training_launchplan = LaunchPlan.get_or_create(
-    training_workflow,
-
-    name="scheduled_training_workflow",
-
-    # run every 2 minutes
-    schedule=CronSchedule(schedule="*/2 * * * *"),
-
-    # use default inputs
-    default_inputs={"hyperparameters": Hyperparameters(C=0.1, max_iter=1000)},
-)
 
 
 if __name__ == "__main__":
