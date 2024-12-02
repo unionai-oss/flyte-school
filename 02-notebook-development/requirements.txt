@@ -1,0 +1,7 @@
+flytekit==1.14.0b6
+pyarrow
+palmerpenguins
+pandas
+scikit-learn
+matplotlib
+seaborn
